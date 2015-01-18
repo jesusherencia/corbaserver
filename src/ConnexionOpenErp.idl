@@ -1,0 +1,28 @@
+/**
+ *
+ * @author MARIE ANGE
+ */
+module ConnexOpenErp
+{
+	interface AchatVente
+	{
+		struct Product { 
+	        long id;
+	        string name;
+	        double qtyAvailable;
+	        double prixVente; 
+		};
+		
+		struct Supplier { 
+	        long id;
+	        string name; 
+		};
+		
+		typedef sequence<Product> ListeProduct;
+		typedef sequence<Supplier> ListeSupplier;    
+		
+		ListeProduct listerProducts();
+		ListeSupplier listerSuppliers();
+		 
+    };
+};
